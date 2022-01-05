@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <title>Chat Panel</title>
+      <script src="/chatPanel.js"></script>
+    </head>
+    <body>
+      <h1>Welcome to the Chat Test</h1>
+      <p>This is a test of the Milestone Internal Chat Bot</p>
+      <button type="button" onclick="javascript:openChat()">Open chat test</button>
+      <script>
+        var options = {
+          chatPanel: {
+            header: {
+              title: "Test chat panel",
+            },
+            styling: {
+              pace: "supersonic",
+            },
+          },
+        };
+        var boost = window.boostInit("milestoneinternal", options);
+  
+        function openChat() {
+          boost.chatPanel.show();
+        }
+      </script>
+    </body>
+  </html>
